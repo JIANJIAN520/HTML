@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>resize 属性指定水平/垂直调整</title>
+    <style type="text/css">
+        .div-both {
+            border: 1px solid green;
+            margin-top: 20px;
+            padding: 15px 30px;
+            width: 250px;
+            resize: both;
+            overflow: auto;
+        }
+        .div-horizontal {
+            border: 1px solid green;
+            margin-top: 20px;
+            padding: 15px 30px;
+            width: 250px;
+            resize: horizontal;
+            overflow: auto;
+        }
+        .div-vertical {
+            border: 1px solid green;
+            margin-top: 20px;
+            padding: 15px 30px;
+            width: 250px;
+            resize: vertical;
+            overflow: auto;
+        }
+        .box-sizing {
+            margin-top: 20px;
+            box-sizing: border-box;
+            -moz-box-sizing: border-box; /* Firefox */
+            width: 50%;
+            border: 1em solid red;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="div-both"></div>
+    <div class="div-horizontal"></div>
+    <div class="div-vertical"></div>
+    <div class="box-sizing"></div>
+</body>
+</html>
