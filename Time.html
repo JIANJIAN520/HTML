@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+	*{
+		padding: 0px;
+		margin: 0px;
+	}
+		#tab{
+			background: #CDCDB4;
+			margin-right: auto;
+			margin-left: auto;
+			margin-top: 20px;
+			width: 245px;
+			height: 280px;
+			border: 1px solid #666;
+			padding: 15px;
+		}
+		#tab .active{
+			background: #363636;
+		}
+		li{
+			width: 50px;
+			height: 60px;
+			color: white;
+			background: gray;
+			text-align: center;
+			margin: 5px;
+			float: left;
+			list-style-type: none;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var arr=['大家可以商量怎么过年了！','大家可以商量怎么过元宵了！','春天来了哦！','想着怎么过五一吧！','天气越来越热了呢！','怎么还不放假','终于快放假了','暑假怎么过的呀','呜呜，又开学了','绿叶逐渐消失了','冬天要来了哦','冬天真的来了，冷'];
+			var oDiv=document.getElementById('tab');
+			var aLi=oDiv.getElementsByTagName('li');
+			var oTxt=oDiv.getElementsByTagName('div')[0];
+			for(var i=0;i<aLi.length;i++){
+				aLi[i].index=i+1;
+				aLi[i].onmouseover=function(){
+					for(var i=0;i<aLi.length;i++){
+					aLi[i].className='';
+					}
+					this.className='active';
+					oTxt.innerHTML='<h2>'+this.index+'月活动'+'</h2>'+arr[this.index-1];
+				}
+			}
+		};
+	</script>
+</head>
+<body>
+<div id="tab" class="calendar">
+	<ul>
+		<li class="active"><h2>1</h2><p>JAN</p></li>
+		<li><h2>2</h2><p>FER</p></li>
+		<li><h2>3</h2><p>MAR</p></li>
+		<li><h2>4</h2><p>APR</p></li>
+		<li><h2>5</h2><p>MAY</p></li>
+		<li><h2>6</h2><p>JUN</p></li>
+		<li><h2>7</h2><p>JUL</p></li>
+		<li><h2>8</h2><p>AUG</p></li>
+		<li><h2>9</h2><p>SEP</p></li>
+		<li><h2>10</h2><p>OCT</p></li>
+		<li><h2>11</h2><p>NOV</p></li>
+		<li><h2>12</h2><p>DEC</p></li>
+	</ul>
+	<div class="text">
+		<h2>1月活动</h2>
+		<p>大家可以商量怎么过年了！</p>
+	</div>
+</div>
+</body>
+</html>
