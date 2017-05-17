@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+        function getBrowserInfo(){
+            var Sys = {};
+            var ua = navigator.userAgent.toLowerCase();
+            var re =/(msie|firefox|chrome|opera|version).*?([\d.]+)/;
+            var m = ua.match(re);
+            Sys.browser = m[1].replace(/version/, "'safari");
+            Sys.ver = m[2];
+            return Sys;
+        }     
+      var sys = getBrowserInfo();//获取当前的浏览器信息 
+    document.write("浏览器名称:"+sys.browser+"<br>版本是：" + sys.ver+"<br>操作系统平台:"+navigator.platform); //sys.browser得到浏览器的类型，sys.ver得到浏览器的版本
+</script>
+</head>
+<body>
+</body>
+</html>
